@@ -1,381 +1,262 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<meta http-equiv=Content-Type content="text/html; charset=windows-874">
+<!DOCTYPE html>
+<html lang="th">
 
-<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>มหาวิทยาลัยแม่โจ้ งานทะเบียนและสถิตินักศึกษา สำนักบริหารและพัฒนาวิชาการ</title>
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<HEAD>
-    <TITLE>มหาวิทยาลัยแม่โจ้ งานทะเบียนและสถิตินักศึกษา สำนักบริหารและพัฒนาวิชาการ</TITLE>
-</HEAD>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Header -->
+            <header class="bg-green-700 text-white px-8 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="images/Common/misc/Tha.jpg" alt="Thai Flag" class="w-6 h-4 rounded shadow">
+                    <span class="text-lg font-bold">มหาวิทยาลัยแม่โจ้</span>
+                </div>
+                <nav>
+                    <ul class="flex items-center gap-4">
+                        <li>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <img src="https://cdn.jsdelivr.net/npm/flag-icons@6/flags/4x3/th.svg" alt="TH" class="w-4 h-3 rounded"> ภาษาไทย
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <img src="https://cdn.jsdelivr.net/npm/flag-icons@6/flags/4x3/gb.svg" alt="EN" class="w-4 h-3 rounded"> English
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-<body>
-    <div align="center">
+            <!-- Main Content -->
+            <div class="flex flex-col md:flex-row">
+                <!-- Sidebar Menu -->
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-gray-200">
+                    <h2 class="text-xl font-semibold text-green-700">เมนูหลัก</h2>
+                    <button id="menu-toggle" class="text-green-700 focus:outline-none" aria-label="Toggle menu">
+                        <!-- Hamburger Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Sidebar Menu -->
+                <aside id="sidebar-menu" class="bg-gray-50 w-full md:w-64 border-r border-gray-200 p-6 md:block hidden">
+                    <h2 class="text-xl font-semibold mb-4 text-green-700 md:block hidden">เมนูหลัก</h2>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="https://sso.mju.ac.th/signin.aspx?cid=0478c5584b404f09b08cc645c23043f9"
+                                class="block px-3 py-2 rounded hover:bg-green-100 text-blue-700 font-semibold">เข้าสู่ระบบ (SSO)</a>
+                        </li>
+                        <li><a href="class_info.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">วิชาที่เปิดสอน</a></li>
+                        <li><a href="learn_time.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">ตารางเรียนนักศึกษา</a></li>
+                        <li><a href="teach_time.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">ตารางสอนอาจารย์</a></li>
+                        <li><a href="room_time.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">ตารางการใช้ห้อง</a></li>
+                        <li><a href="calendar.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">ปฏิทินการศึกษา</a></li>
+                        <li><a href="http://www.education.mju.ac.th/www/programInfo.aspx" class="block px-3 py-2 rounded hover:bg-green-100" target="_blank">หลักสูตรที่เปิดสอน</a></li>
+                        <li><a href="feedback_allans.asp?avs314485154=1" class="block px-3 py-2 rounded hover:bg-green-100">ตอบคำถาม</a></li>
+                        <li><a href="../enrollguide.htm" class="block px-3 py-2 rounded hover:bg-green-100">แนะนำการลงทะเบียน</a></li>
+                        <li>
+                            <a href="https://finance.mju.ac.th/goverment/20111119104835_finance/Doc_25670715102551_410030.pdf"
+                                class="block px-3 py-2 rounded hover:bg-green-100" target="_blank">
+                                วิธีการพิมพ์ใบเสร็จรับเงินค่าเทอม(กองคลัง)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.education.mju.ac.th" class="block px-3 py-2 rounded hover:bg-green-100" target="_blank">
+                                เว็บไซต์สำนักบริหารฯ
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                <script>
+                    // Toggle sidebar menu on mobile
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const menuToggle = document.getElementById('menu-toggle');
+                        const sidebarMenu = document.getElementById('sidebar-menu');
+                        if (menuToggle && sidebarMenu) {
+                            menuToggle.addEventListener('click', function () {
+                                sidebarMenu.classList.toggle('hidden');
+                            });
+                        }
+                    });
+                </script>
 
-        <div id="wrapper">
-            <table border="0" cellspacing="0" cellpadding="0" width="753px" bgcolor='#FFFFFF'>
-                <tr>
-                    <td valign="top">
-                        <div id="content" width="100%">
-                            <div id="header">
+                <!-- Announcements -->
+                <main class="flex-1 p-6">
+                    <div class="mb-6">
+                        <div class="bg-yellow-200 rounded px-4 py-2 mb-4">
+                            <marquee direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+                                <span class="font-bold text-green-800">ยินดีต้อนรับสู่ระบบบริการการศึกษา</span>
+                            </marquee>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">ประกาศเรื่อง</h3>
+                        <div class="space-y-6">
+                            <!-- Announcement 1 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">1. รักษาสภาพ/ลาพัก</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78647" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" class="w-5 h-5 inline">
+                                            <circle cx="16" cy="16" r="16" fill="#1877F3"/>
+                                            <path d="M21.5 11.5h-2a.5.5 0 0 0-.5.5v2h2.25a.25.25 0 0 1 .25.25l-.01 2a.25.25 0 0 1-.25.25H19v5a.25.25 0 0 1-.25.25h-2a.25.25 0 0 1-.25-.25v-5h-1.5a.25.25 0 0 1-.25-.25v-2a.25.25 0 0 1 .25-.25H16v-2.5A2.5 2.5 0 0 1 18.5 9h3a.25.25 0 0 1 .25.25v2a.25.25 0 0 1-.25.25z" fill="#fff"/>
+                                            <path d="M13 17l6-3-6-3v2H8v2h5v2z" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="my-3 flex justify-center">
+                                    <a href="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline" target="_blank">
+                                        <img src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                    </a>
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 26 มิถุนายน 2568</span>
+                                </div>
+                            </div>
+                            <!-- Announcement 2 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">2. 10100214 ผษ101 เกษตรเพื่อชีวิต</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78407" target="_blank">
+                                        <img src="images/fb.png" alt="Share" class="w-5 h-5 inline">
+                                    </a>
+                                </div>
+                                <div class="my-3 flex justify-center">
+                                    <img src="https://erp.mju.ac.th/openFile.aspx?id=NzE3MzI0&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 19 มิถุนายน 2568</span>
+                                </div>
+                            </div>
+                            <!-- Announcement 3 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">3. หนังสือเรียน 10700319</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78326" target="_blank">
+                                        <img src="images/fb.png" alt="Share" class="w-5 h-5 inline">
+                                    </a>
+                                </div>
+                                <div class="my-3 flex justify-center">
+                                    <img src="https://erp.mju.ac.th/openFile.aspx?id=NzE2MTQ1&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 16 มิถุนายน 2568</span>
+                                </div>
+                            </div>
+                            <!-- Announcement 4 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">4. MS Teams</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78186" target="_blank">
+                                        <img src="images/fb.png" alt="Share" class="w-5 h-5 inline">
+                                    </a>
+                                </div>
+                                <div class="my-3 flex justify-center">
+                                    <a href="https://maejo.link/Fa1L" target="_blank">
+                                        <img src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMzk4&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                    </a>
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 8 เมษายน 2568</span>
+                                </div>
+                            </div>
+                            <!-- Announcement 5 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">5. NEW MSG</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78146" target="_blank">
+                                        <img src="images/fb.png" alt="Share" class="w-5 h-5 inline">
+                                    </a>
+                                </div>
+                                <div class="my-3 flex justify-center">
+                                    <img src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMjYx&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 4 มีนาคม 2568</span>
+                                </div>
+                            </div>
+                            <!-- Announcement 6 -->
+                            <div class="bg-white rounded shadow p-4 border-l-4 border-green-600">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-green-700">6. ห้องเรียนอยู่ไหน ?</span>
+                                        <span class="text-red-600 ml-2">(ด่วนที่สุด)</span>
+                                    </div>
+                                    <a href="http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=77152" target="_blank">
+                                        <img src="images/fb.png" alt="Share" class="w-5 h-5 inline">
+                                    </a>
+                                </div>
+                                <div class="my-3 flex flex-col items-center">
+                                    <a href="https://maejo.link/2pfI" class="text-green-700 font-bold text-lg underline mb-2" target="_blank">
+                                        ตรวจสอบห้องเรียน คลิ๊ก !!
+                                    </a>
+                                    <img src="https://erp.mju.ac.th/openFile.aspx?id=NjQ1MDIz&method=inline" alt="ประกาศ" class="rounded shadow max-w-full w-[600px]">
+                                </div>
+                                <div class="text-sm text-gray-600 flex justify-between">
+                                    <span>ประกาศโดย -</span>
+                                    <span>วันที่ประกาศ 27 มิถุนายน 2567</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </main>
+            </div>
 
-                        <div id="page">
-                            <FORM METHOD=POST ACTION="" NAME=FRM_LANG></FORM>
-
-                            <table width="930" height="0" border="0" cellpadding="0" cellspacing="0" bordercolor="green"
-                                bgcolor="#3B3B3B">
-                                <tr valign="left">
-                                    <td align="left">
-                                        <div class="ultimatedropdown">
-                                            <ul style="float: right;">
-                                                <li><a href="#"><IMG SRC="images/Common/misc/Tha.jpg" WIDTH="15"
-                                                            HEIGHT="10" BORDER="0">&nbsp;ภาษาไทย&nbsp;&nbsp;</a>
-                                                    <ul>
-                                                        <li><a href="#"><IMG SRC="images/Common/misc/Tha.jpg" WIDTH="15"
-                                                                    HEIGHT="10" BORDER="0">&nbsp;ภาษาไทย</a></li>
-                                                        <li><a href="#"><IMG SRC="images/Common/misc/Eng.jpg" WIDTH="15"
-                                                                    HEIGHT="10" BORDER="0">&nbsp;English</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <table height="2px" width="930px" border="0" cellpadding="0" cellspacing="0"
-                                    bordercolor="#FFBA00" bgcolor="#FFBA00">
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                </table>
-
-                                <table border=0 width="100%" height="100%" cellpadding="0" cellspacing="0"
-                                    bordercolor=red>
-                                    <tr VALIGN=TOP>
-
-                                        <!-- Select Language -->
-
-                                        <!-- Begin Menu -->
-                                        <td width="200px">
-                                            <div id="title" class="boxed">
-                                                <h1 class="title">เมนูหลัก</h1>
-                                            </div>
-                                            <div id="menu" class="style4">
-                                                <ul>
-                                                    <li><a
-                                                            href="https://sso.mju.ac.th/signin.aspx?cid=0478c5584b404f09b08cc645c23043f9">
-                                                            <font color="#0000ff">เข้าสู่ระบบ (SSO)</font>
-                                                        </a></li>
-                                                    <li><a href="class_info.asp?avs314485154=1">วิชาที่เปิดสอน</a></li>
-                                                    <li><a href="learn_time.asp?avs314485154=1">ตารางเรียนนักศึกษา</a>
-                                                    </li>
-                                                    <li><a href="teach_time.asp?avs314485154=1">ตารางสอนอาจารย์</a></li>
-                                                    <li><a href="room_time.asp?avs314485154=1">ตารางการใช้ห้อง</a></li>
-                                                    <li><a href="calendar.asp?avs314485154=1">ปฏิทินการศึกษา</a></li>
-                                                    <li><a
-                                                            href="http://www.education.mju.ac.th/www/programInfo.aspx">หลักสูตรที่เปิดสอน</a>
-                                                    </li>
-                                                    <li><a href="feedback_allans.asp?avs314485154=1">ตอบคำถาม</a></li>
-                                                    <li><a href="../enrollguide.htm">แนะนำการลงทะเบียน</a></li>
-                                                    <li><a href="https://finance.mju.ac.th/goverment/20111119104835_finance/Doc_25670715102551_410030.pdf"
-                                                            target='_blank'>วิธีการพิมพ์ใบเสร็จรับเงินค่าเทอม(กองคลัง)</a>
-                                                    </li>
-                                                    <li><a href="http://www.education.mju.ac.th"
-                                                            target='_blank'>เว็บไซต์สำนักบริหารฯ</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <!-- End Menu -->
-                                        <!-- Begin Page Detail -->
-
-                                        <div id="myDiv"></div>
-                                        <td width="730" valign="top" class="normalDetail">
-
-                                            <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3>
-                                                <TR>
-                                                    <TD WIDTH=10></TD>
-                                                    <TD class='styleMARQUEE' width=750>
-                                                        <DIV CLASS='styleMARQUEE'>
-                                                            <marquee direction=LEFT scrollamount=1 behavior="scroll"
-                                                                scrolldelay="27" onmouseover="this.scrollAmount=0"
-                                                                onmouseout="this.scrollAmount=1" truespeed="true">
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                                    style='text-decoration:'><B>ยินดีต้อนรับสู่ระบบบริการการศึกษา</B></span>&nbsp;&nbsp;&nbsp;
-                                                            </marquee>
-                                                        </DIV>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD WIDTH=10></TD>
-                                                </TR>
-                                            </TABLE>
-                                            <TABLE BORDER=0 CELLSPACING=3 CELLPADDING=2 width=700 class=normalDetail>
-                                                <TR BGCOLOR=#A0A0A0>
-                                                    <TD WIDTH=20 BGCOLOR=#FFFFFF>&nbsp;</TD>
-                                                    <TD WIDTH=350 COLSPAN=3>
-                                                        <FONT COLOR=#FFFFFF><B>&nbsp;ประกาศเรื่อง
-                                                    </TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>1.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>รักษาสภาพ/ลาพัก</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78647
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <div style="text-align: center;">
-                                                            <a href="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline"
-                                                                target="_blank">
-                                                                <img width="600px"
-                                                                    src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline"></a><br />
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;26
-                                                                มิถุนายน 2568
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>2.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>10100214 ผษ101 เกษตรเพื่อชีวิต</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78407
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <div style="text-align: center;">
-                                                            <img width="600px"
-                                                                src="https://erp.mju.ac.th/openFile.aspx?id=NzE3MzI0&method=inline">
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;19
-                                                                มิถุนายน 2568
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>3.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>หนังสือเรียน 10700319</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78326
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <div style="text-align: center;">
-                                                            <img width="600px"
-                                                                src="https://erp.mju.ac.th/openFile.aspx?id=NzE2MTQ1&method=inline">
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;16
-                                                                มิถุนายน 2568
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>4.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>MS Teams</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78186
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <div style="text-align: center;"> <a
-                                                                href="https://maejo.link/Fa1L" target="_blank">
-                                                                <img width="600px"
-                                                                    src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMzk4&method=inline"></a>
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;8
-                                                                เมษายน 2568
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>5.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>NEW MSG</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=78146
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <div style="text-align: center;">
-                                                            <img width="600px"
-                                                                src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMjYx&method=inline">
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;4
-                                                                มีนาคม 2568
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                                <TR VALIGN=TOP>
-                                                    <TD WIDTH=20>&nbsp;</TD>
-                                                    <TD BGCOLOR=#FFFFFF ROWSPAN=3 ALIGN=CENTER>6.</TD>
-                                                    <TD BGCOLOR=#FFFFFF COLSPAN=2>
-                                                        <FONT COLOR=#000080><B><u>ห้องเรียนอยู่ไหน ?</u></B>
-                                                            <FONT COLOR=#FF0000>(ด่วนที่สุด)</FONT>&nbsp;Share to
-                                                        </font> <a
-                                                            href=http://www.facebook.com/share.php?u=http://www.education.mju.ac.th/news.aspx?webmsgid=77152
-                                                            target=_blank><img src=images/fb.png width=16 height=16
-                                                                border=0 /></a>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD COLSPAN=2 BGCOLOR=#FFFFFF>
-                                                        <p
-                                                            style=" font-family: 'Prompt', serif;font-size: 20px;color:green;text-align: center;">
-                                                            <a href="https://maejo.link/2pfI">ตรวจสอบห้องเรียน คลิ๊ก
-                                                                !!</a>
-                                                        </p></br>
-                                                        <div style="text-align: center;"><img width="600px"
-                                                                src="https://erp.mju.ac.th/openFile.aspx?id=NjQ1MDIz&method=inline">
-                                                        </div>
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD></TD>
-                                                    <TD NOWRAP BGCOLOR=#F7F7F7 COLSPANS=2>
-                                                        <FONT COLOR=#800000>ประกาศโดย&nbsp;&nbsp;&nbsp;-<FONT
-                                                                COLOR=#000080>&nbsp; &nbsp;วันที่ประกาศ&nbsp; &nbsp;27
-                                                                มิถุนายน 2567
-                                                    </TD>
-                                                </TR>
-                                                <TR>
-                                                    <TD HEIGHT=10 COLSPAN=4></TD>
-                                                </TR>
-                                            </TABLE>
-                                            <!-- End Page Detail -->
-                                        <td height=400></td>
-                                    </tr>
-                                </table>
-
-                                <table border=0 bordercolor=red width="100%" cellpadding="0" cellspacing="0">
-                                    <div style="clear:both"></div>
-                        </div>
-                <TR>
-                    <td align="center" width="201px">
-                        <font face=tahome COLOR=BLUE size=2>
-                            <div id="footer" class="boxed">
-                        </FONT>
-                    </TD>
-                </TR>
-        </div>
-        <tr valign="TOP">
-
-            <td align="center" valign="center" width="201px">
-                <div class="boxed">
-                    <br>
-                    <A HREF=http://www.vn.co.th><IMG SRC=images/thai/logo/vn_logo.gif WIDTH=88 HEIGHT=29 BORDER=0></A>
-                    <br><br>
+            <!-- Footer -->
+            <footer class="bg-gray-800 text-gray-200 px-8 py-6 mt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex items-center gap-4 mb-4 md:mb-0">
+                        <a href="http://www.vn.co.th" target="_blank">
+                            <img src="images/thai/logo/vn_logo.gif" alt="Vision Net" class="w-20 h-auto">
+                        </a>
+                        <span class="text-sm">Powered by Vision Net, 1995 - 2010</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                        <span class="text-sm">Contact Staff : กลุ่มภารกิจทะเบียนเรียน ประมวลผล และรับเข้า 0-5387-3458</span>
+                        <span class="text-sm">49</span>
+                    </div>
                 </div>
-            </td>
-
-            <td><br>&nbsp;&nbsp<A NAME=bottom HREF=#top><IMG SRC=images/common/button/go_top_1.gif WIDTH=129 HEIGHT=29
-                        BORDER=0></A>
-
-                <table border=0 width=700 class='footermenu' cellspacint=0 cellpading=0>
-                    <tr>
-                        <td width=5></td>
-                        <td align='center'><a href=http://www.mua.go.th/ target=new><span
-                                    style='text-decoration: none'>สกอ.<span></a>&nbsp;|&nbsp;<a
-                                href=http://www.studentloan.or.th/ target=new><span
-                                    style='text-decoration: none'>กยศ.<span></a>&nbsp;|&nbsp;<a
-                                href=http://www.onesqa.or.th/ target=new><span
-                                    style='text-decoration: none'>ศมส.<span></a>&nbsp;|&nbsp;<a
-                                href=http://www.runaheadsms.com target=new><span
-                                    style='text-decoration: none'>Runahead<span></a>&nbsp;|&nbsp;<a
-                                href=http://www.vn.co.th target=new><span style='text-decoration: none'>Vision Net
-                                    Co.Ltd.<span></a>&nbsp;|&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
-            </td>
-            <table border=0 width="930px" height="0" bgcolor="#3B3B3B">
-                <tr>
-                    <td align="center" width="200px" class='footertext'>
-                        Powered by Vision Net, 1995 - 2010
-                    </td>
-                    <TD class='footertext'>&nbsp;&nbsp;Contact Staff : กลุ่มภารกิจทะเบียนเรียน ประมวลผล และรับเข้า
-                        0-5387-3458
-                    <td>
-                    <TD class='footertext' align="right">49</td>
-                </tr>
-            </table>
-
+                <div class="mt-4 flex flex-wrap gap-2 justify-center text-xs">
+                    <a href="http://www.mua.go.th/" target="_blank" class="hover:underline">สกอ.</a>|
+                    <a href="http://www.studentloan.or.th/" target="_blank" class="hover:underline">กยศ.</a>|
+                    <a href="http://www.onesqa.or.th/" target="_blank" class="hover:underline">ศมส.</a>|
+                    <a href="http://www.runaheadsms.com" target="_blank" class="hover:underline">Runahead</a>|
+                    <a href="http://www.vn.co.th" target="_blank" class="hover:underline">Vision Net Co.Ltd.</a>
+                </div>
+                <div class="mt-4 flex justify-end">
+                    <a href="#top">
+                        <img src="images/common/button/go_top_1.gif" alt="Go Top" class="w-32 h-8">
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 
 </html>
